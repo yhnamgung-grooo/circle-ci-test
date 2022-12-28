@@ -22,6 +22,7 @@ jobs:
       - image: circleci/openjdk:8-jdk-browsers
     steps:
       - checkout
+      - setup_remote_docker
       - run:
           name: "Go Docker Image Build !"
           command: "docker build -t yh9189/circle-ci-test-1 ."
@@ -30,6 +31,7 @@ jobs:
       - image: circleci/openjdk:8-jdk-browsers
     steps:
       - checkout
+      - setup_remote_docker
       - run:
           name: "Go Docker Image Build !"
           command: "docker build -t yh9189/circle-ci-test-2 ."
@@ -38,6 +40,7 @@ jobs:
       - image: circleci/openjdk:8-jdk-browsers
     steps:
       - checkout
+      - setup_remote_docker
       - run:
           name: "Go Docker Image Build !"
           command: "docker build -t yh9189/circle-ci-test-3 ."
