@@ -19,7 +19,7 @@ jobs:
           command: "echo Hello, World!"
   build1:
     docker:
-      - image: cimg/base:stable
+      - image: circleci/openjdk:8-jdk-browsers
     steps:
       - checkout
       - run:
@@ -27,7 +27,7 @@ jobs:
           command: "docker build -t yh9189/circle-ci-test-1 ."
   build2:
     docker:
-      - image: cimg/base:stable
+      - image: circleci/openjdk:8-jdk-browsers
     steps:
       - checkout
       - run:
@@ -35,7 +35,7 @@ jobs:
           command: "docker build -t yh9189/circle-ci-test-2 ."
   build3:
     docker:
-      - image: cimg/base:stable
+      - image: circleci/openjdk:8-jdk-browsers
     steps:
       - checkout
       - run:
