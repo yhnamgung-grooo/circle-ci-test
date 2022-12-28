@@ -18,29 +18,29 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
   build1:
-    docker: 
+    docker:
       - image: cimg/base:stable
     steps:
       - checkout
       - run:
           name: "Go Docker Image Build !"
-          command: "docker build -f yh9189/circle-ci-test-1 ."
+          command: "docker build -t yh9189/circle-ci-test-1 ."
   build2:
-    docker: 
+    docker:
       - image: cimg/base:stable
     steps:
       - checkout
       - run:
           name: "Go Docker Image Build !"
-          command: "docker build -f yh9189/circle-ci-test-2 ."
+          command: "docker build -t yh9189/circle-ci-test-2 ."
   build3:
-    docker: 
+    docker:
       - image: cimg/base:stable
     steps:
       - checkout
       - run:
           name: "Go Docker Image Build !"
-          command: "docker build -f yh9189/circle-ci-test-3 ."
+          command: "docker build -t yh9189/circle-ci-test-3 ."
   finish:
       # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
       # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
